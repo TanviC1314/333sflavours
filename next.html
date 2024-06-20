@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Boogaloo&family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("temp.png");
+      background-repeat: repeat;
+      background-attachment: fixed;
+    }
+
+    div.ex2 {
+      width: 72%;
+      padding: 10px;
+      max-width: 700px;
+      border-radius: 25px;
+      text-align: center;
+      font-size: 27px;
+      font-family: 'Lobster', cursive;
+      margin: auto;
+      background-color: white;
+    }
+
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+
+    .img1 {
+      padding-left: 20px;
+    }
+
+    .noSelect {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .noSelect:focus {
+      outline: none !important;
+    }
+
+    div.ex3 {
+      width: 69%;
+      padding: 50px;
+      max-width: 700px;
+      border-radius: 15px;
+      text-align: left;
+      padding-left: 30px;
+      font-family: 'Akaya Telivigala', cursive;
+      margin: auto;
+      background-color: white;
+    }
+
+    .tv {
+      border: 0;
+      border-bottom: 1px solid black;
+      text-align: left;
+      margin-right: 20px;
+      font-size: 20px;
+      width: 100%;
+      text-decoration: none;
+      word-wrap: break-word;
+      font-family: 'Akaya Telivigala', cursive;
+    }
+
+    .tv2 {
+      border: 0;
+      border-bottom: 1px solid black;
+      text-align: left;
+      margin-right: 20px;
+      font-size: 15px;
+      width: 68%;
+      word-wrap: break-word;
+      font-family: 'Akaya Telivigala', cursive;
+    }
+
+    .tv3 {
+      border: 0;
+      border-bottom: 1px solid black;
+      text-align: left;
+      margin-right: 20px;
+      resize: none;
+      font-size: 18px;
+      width: 71%;
+      word-wrap: break-word;
+      font-family: 'Akaya Telivigala', cursive;
+    }
+
+    .sp {
+      display: block;
+    }
+
+    /* CSS */
+    .button-52 {
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      padding: 13px 20px 13px;
+      outline: 0;
+      border: 1px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      font-family: 'Akaya Telivigala', cursive;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .button-52:after {
+      -webkit-tap-highlight-color: transparent;
+      content: "";
+      background-color: #ffe54c;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
+    }
+
+    .button-52:hover:after {
+      top: 0px;
+      left: 0px;
+    }
+
+    @media (min-width: 768px) {
+      .button-52 {
+        padding: 13px 50px 13px;
+      }
+    }
+
+    select.tv {
+      background-color: white;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .img1 {
+        width: 50px;
+        padding-left: 10px;
+      }
+
+      .img2 {
+        width: 140px;
+      }
+    }
+  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="all">
+    <form name="submit-to-google-sheet">
+      <br>
+      <div class="ex2">
+        <img class="img1" src="coffee-mug.png" width="58px">
+        <img style="padding-bottom: 6px;" class="img1 img2" src="333's FLAVOUR’s.png" width="188px">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demo1" class="sp"></span>
+        <input type="text" name="Name" autocomplete="off" id="t1" placeholder="Name" class="tv" required onblur="fun('demo1','t1')" onclick="myFunction('demo1','t1','Enter Your Name')">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demo2" class="sp"></span>
+        <input type="tel" name="Contact" autocomplete="off" id="t2" required placeholder="Contact No." class="tv" maxlength="10" onblur="fun('demo2','t2')" onfocus="myFunction('demo2','t2','Enter your Contact Number')">
+        <br>
+      </div>
+      <br>
+      <div class="ex2"><span class="e2">Quantity</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></div>
+      <br>
+      <div class="ex3">
+        <span id="demoKitKat" class="sp"></span>
+        <input type="number" name="kitkat" autocomplete="off" class="tv" placeholder="Kit Kat Jar Cake (₹130)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoOreo" class="sp"></span>
+        <input type="number" name="oreo" autocomplete="off" class="tv" placeholder="Oreo Crunch Jar Cake (₹150)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoMango" class="sp"></span>
+        <input type="number" name="mango" autocomplete="off" class="tv" placeholder="Mango Mazha Jar Cake (₹170)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoButterscotch" class="sp"></span>
+        <input type="number" name="butterscotch" autocomplete="off" class="tv" placeholder="Butterscotch Jar Cake (₹170)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoTruffle" class="sp"></span>
+        <input type="number" name="truffle" autocomplete="off" class="tv" placeholder="Chocolate Truffle Jar Cake (₹170)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoRedVelvet" class="sp"></span>
+        <input type="number" name="redvelvet" autocomplete="off" class="tv" placeholder="Red Velvet Jar Cake (₹220)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoRedVelvetNutella" class="sp"></span>
+        <input type="number" name="redvelvetnutella" autocomplete="off" class="tv" placeholder="Red Velvet Nutella Jar Cake (₹250)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoNutellaBliss" class="sp"></span>
+        <input type="number" name="nutellabliss" autocomplete="off" class="tv" placeholder="Nutella Bliss Jar Cake (₹230)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoFerraroRocher" class="sp"></span>
+        <input type="number" name="ferrarorocher" autocomplete="off" class="tv" placeholder="Ferraro Rocher Jar Cake (₹250)">
+        <br>
+      </div>
+      <br>
+
+      <div class="ex3">
+        <span id="demoSwooshHazelnut" class="sp"></span>
+        <input type="number" name="swooshhazelnut" autocomplete="off" class="tv" placeholder="Swoosh Hazelnut Jar Cake (₹299)">
+        <br>
+      </div>
+      <br>
+
+      <center>
+        <button type="submit" class="button-52" role="button" onclick="win()">Submit</button>
+        <br>
+      </center>
+      <br><br>
+    </form>
+
+   
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyPl1AE08X7gBh3Yy_29ggjBzDqGZed0O5FwbYN3HmmauRwEOFVQKjZfV2pF5s6hZIoZQ/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, {
+            method: 'POST',
+            body: new FormData(form)
+          })
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    
+  </div>
+
+  <script>
+    function win() {
+      window.open("last.html");
+    }
+
+  </script>
+</body>
+
+</html>
